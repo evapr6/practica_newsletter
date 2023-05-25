@@ -1,0 +1,96 @@
+// Variables
+
+//// Colores
+$color__blanco: #f4f9f9
+$color__negro: #241c15
+$color__fondo: #fbeeca
+$color__primario: #007c89
+$color__secundario: #c5dbf2
+
+//// Tamanyos
+$gap__s: .5rem
+$gap__m: 1rem // es el espacio, la distancia
+$gap__l: 1.5rem
+$gap__xl: 2rem
+$container__m: 800px
+
+//// Tipografia
+
+// Generales
+
+body
+  background-color: $color__fondo
+  font-family: 'Open Sans', sans-serif
+  color: $color__negro
+
+// Componentes
+.container
+  padding:
+    left: $gap__m
+    right: $gap__m
+  margin: 0 auto
+  max-width: $container__m
+.image
+  width: 100%
+
+.link
+  color: $color__primario
+
+.boton
+  display: inline-block
+  padding: $gap__m
+  background-color: $color__primario
+  color: $color__blanco
+  text-decoration: none
+  font-weight: bold
+  border: 1px solid $color__primario
+  &:hover
+    background-color: transparent
+    color: $color__primario
+    border-color: transparent
+  &--transparente
+    background-color: transparent
+    color: $color__primario
+    border-color: transparent
+    &:hover
+      border-color: $color__primario
+
+.alerta
+  background-color: $color__secundario
+  padding:
+    top: $gap__s
+    bottom: $gap__s
+
+
+.fuente__tiutlo
+  font-family: 'Libre Baskerville', serif
+
+
+
+
+
+
+// Pagina inicio
+
+.hero
+  .container
+    display: flex
+    gap: $gap__xl
+    align-items: center // para centrar en la vertical al centro
+    $padding__size: 7rem //variable local que solo se va autilizar dentro del hero y se ve más claro
+    padding:
+      top: $padding__size
+      bottom: $padding__size
+    @media all and (max-width: 600px)
+      flex-direction: column // solo colum para que la imagen se quede debajo del texto, si queiro que la imagen se queda arriba poner colum-reverse
+  &__texto, &__imagen
+    flex: 1
+  &__titulo
+    font-size: $gap__xl
+  &__description
+    font-size: $gap__l
+  &__lista
+    display: flex
+    padding: 0
+    list-style: none
+    gap: $gap__m
